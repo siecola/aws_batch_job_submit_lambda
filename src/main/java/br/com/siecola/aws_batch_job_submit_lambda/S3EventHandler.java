@@ -24,7 +24,7 @@ public class S3EventHandler implements RequestHandler<S3Event, String> {
         JobParameter jobParameter = jobReader.readJob(key);
 
         JobScheduler jobScheduler = new JobScheduler();
-        String jobId = jobScheduler.submitJob("job-" + key, jobParameter);
+        String jobId = jobScheduler.submitJob(key, jobParameter);
 
         logger.log("JobId: "+ jobId);
         return null;

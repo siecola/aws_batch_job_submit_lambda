@@ -6,12 +6,15 @@ public class JobParameter {
     private String definition;
     private int vCpu;
     private int memory;
+    private int attempts;
 
-    public JobParameter(String queue, String definition, int vCpu, int memory) {
+    public JobParameter(String queue, String definition, int vCpu, int memory,
+                        int attempts) {
         this.queue = queue;
         this.definition = definition;
         this.vCpu = vCpu;
         this.memory = memory;
+        this.attempts = attempts;
     }
 
     public String getQueue() {
@@ -28,5 +31,9 @@ public class JobParameter {
 
     public int getMemory() {
         return memory;
+    }
+
+    public int getAttempts() {
+        return attempts;
     }
 }

@@ -21,6 +21,7 @@ public class JobReader {
         return new JobParameter(job.getString("queue"),
                 job.getString("definition"),
                 job.getInt("vCpu"),
-                job.getInt("memory"));
+                job.getInt("memory"),
+                job.getInt("attempts"));
     }
 }
