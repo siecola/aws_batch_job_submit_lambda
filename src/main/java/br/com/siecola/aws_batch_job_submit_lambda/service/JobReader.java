@@ -15,7 +15,7 @@ public class JobReader {
                 new EnvironmentVariableCredentialsProvider());
         ddbClient.withRegion(Regions.US_EAST_1);
         DynamoDB dynamoDB = new DynamoDB(ddbClient);
-        Table table = dynamoDB.getTable("job-transaction");
+        Table table = dynamoDB.getTable("job");
         Item job = table.getItem("id", jobId);
 
         return new JobParameter(job.getString("queue"),
