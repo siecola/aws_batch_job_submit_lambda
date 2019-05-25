@@ -25,6 +25,8 @@ public class JobScheduler {
 
         SubmitJobResult response = client.submitJob(request);
 
+        //TODO - put a log information that this job was submitted
+        //TODO - persist the job status: submited
         return response.getJobId();
     }
 }
